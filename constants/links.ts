@@ -1,11 +1,11 @@
 interface Links {
   name: string;
-  href: string;
+  url: string;
 }
 
 export const NAV_LINKS: Array<Links> = [
-  { name: "About", href: "/about" },
-  { name: "Home", href: "/" },
+  { name: "About", url: "/about" },
+  { name: "Home", url: "/" },
 ];
 
 export const SOCIAL_LINKS = {
