@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://martinsione.com/sitemap.xml
