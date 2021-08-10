@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Layout({
   title,
@@ -44,7 +45,10 @@ export default function Layout({
         />
       </Head>
       <Navbar />
-      <main>{children}</main>
+      <main className="flex flex-col justify-center px-8">
+        {children}
+        <Footer />
+      </main>
     </>
   );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { FaSun, FaMoon } from "react-icons/fa";
+import { NAV_LINKS } from "@/constants/links";
 
 export default function Navbar() {
   const [mounted, setMounted] = useState(false);
@@ -22,12 +23,11 @@ export default function Navbar() {
         {mounted && (resolvedTheme === "dark" ? <FaSun /> : <FaMoon />)}
       </button>
       <div>
-        <Link href="/about">
-          <a className="pl-4 text-gray-900 dark:text-gray-100">About</a>
-        </Link>
-        <Link href="/">
-          <a className="pl-4 text-gray-900 dark:text-gray-100">Home</a>
-        </Link>
+        {NAV_LINKS.map((link, key: number) => (
+          <Link key={key} href={link.href}>
+            <a className="pl-4 text-gray-900 dark:text-gray-100">{link.name}</a>
+          </Link>
+        ))}
       </div>
     </nav>
   );
