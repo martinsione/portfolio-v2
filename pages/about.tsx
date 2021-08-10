@@ -21,8 +21,9 @@ export default function about() {
           </p>
           <p>
             Currently I&apos;m studing Computer Science 🖥️ in UNL (National
-            University of Litoral) and I&apos;m really liking it so far, I'm on
-            my first year and I&apos;m sure there&apos;s lot to learn 👨🏽‍🏫.
+            University of Litoral) and I&apos;m really liking it so far,
+            I&apos;m on my first year and I&apos;m sure there&apos;s lot to
+            learn 👨🏽‍🏫.
           </p>
           <p>
             I grew up in small-town Parana, Argentina. I graduated High School
