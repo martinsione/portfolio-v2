@@ -13,7 +13,7 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className="sticky top-0 flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-black text-lg">
+    <nav className="sticky top-0 flex justify-between items-center w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-black text-lg">
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
       </a>

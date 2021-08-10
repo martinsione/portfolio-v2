@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
             name="msapplication-config"
           />
         </Head>
-        <body className="bg-white dark:bg-black text-black dark:text-white">
+        <body className="max-w-4xl mx-auto bg-white dark:bg-black text-black dark:text-white">
           <Main />
           <NextScript />
         </body>
