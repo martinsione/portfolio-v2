@@ -45,7 +45,7 @@ export default function Layout({
         />
       </Head>
       <Navbar />
-      <main className="flex flex-col justify-center px-8">
+      <main className="flex flex-col justify-center max-w-3xl px-8 mx-auto">
         {children}
         <Footer />
       </main>

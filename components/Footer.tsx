@@ -23,7 +23,7 @@ const ExternalLink = ({
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center mb-8">
+    <footer className="flex flex-col items-center mt-16 mb-8">
       <div className="flex space-x-4 mb-4">
         <ExternalLink className="text-xl" href={SOCIAL_LINKS.linkedin}>
           <FaLinkedin />
