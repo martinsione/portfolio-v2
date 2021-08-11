@@ -1,7 +1,17 @@
 {
   "name": "martinsione.com-ts",
+  "description": "My personal website.",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "Martin Sione",
+    "email": "martinsione03@gmail.com",
+    "url": "https://martinsione.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinsione/martinsione.com.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
