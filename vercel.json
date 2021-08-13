@@ -1,0 +1,29 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/fonts/inter-var-latin.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/resume",
+      "destination": "/sione-martin-resume-2021.pdf"
+    },
+    {
+      "source": "/linkedin",
+      "destination": "https://linkedin.com/in/martinsione"
+    },
+    {
+      "source": "/github",
+      "destination": "https://github.com/martinsione"
+    }
+  ]
+}
