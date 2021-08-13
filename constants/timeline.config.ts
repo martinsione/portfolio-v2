@@ -1,15 +1,10 @@
-interface TimelineStruct {
+interface props {
   year: number;
   title: string;
   description?: string;
 }
 
-export const timeline: Array<TimelineStruct> = [
-  {
-    year: 2021,
-    title: "Started college",
-    description: "Been waiting a long time for this moment 🤗.",
-  },
+export const timeline: Array<props> = [
   {
     year: 2021,
     title: "Started college",

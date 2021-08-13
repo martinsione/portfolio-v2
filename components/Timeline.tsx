@@ -1,76 +1,33 @@
 import { FiCheckCircle } from "react-icons/fi";
 
-const Divider = () => (
-  <div className="border border-gray-200 dark:border-gray-600 w-full my-8"></div>
-);
-
-const Step = ({
-  year,
-  title,
-  description,
-}: {
-  year?: number;
-  title: string;
-  description?: string;
-}) => {
-  return (
-    <>
-      <h3 className="text-lg md:text-xl font-bold mb-4 tracking-tight text-gray-900 dark:text-gray-100">
-        {year}
-      </h3>
-      <ul>
-        <li className="mb-4 ml-2">
-          <div className="flex items-center mb-2 text-green-700 dark:text-green-300">
-            <span className="sr-only">Check</span>
-            <FiCheckCircle />
-            <p className="font-medium text-gray-900 dark:text-gray-100 ml-2">
-              {title}
-            </p>
-          </div>
-          <p className="text-sm text-gray-700 dark:text-gray-400 ml-6">
-            {description}
-          </p>
-        </li>
-      </ul>
-    </>
-  );
-};
-
-interface TimelineStruct {
-  year: number | undefined;
+interface props {
+  year: number;
   title: string;
   description?: string;
 }
 
-export default function Timeline({
-  title,
-  timeline,
-}: {
-  title: string;
-  timeline: Array<TimelineStruct>;
-}) {
-  let prevYear: number | undefined, currentYear: number | undefined;
-  let loadDivider: boolean;
+export default function Timeline({ timeline }: { timeline: Array<props> }) {
+  let currentYear: number | null, previousYear: number;
   return (
     <>
-      <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
-        {title}
-      </h3>
-
-      {timeline.map((step, key) => {
-        currentYear = prevYear !== step.year ? step.year : undefined;
-        // Divider will only load if year if different than prevYear and if its not the current year (first step)
-        loadDivider = currentYear !== undefined && key !== 0 ? true : false;
-        prevYear = step.year;
-
+      {timeline.map((step, i: number) => {
+        currentYear = previousYear !== step.year ? step.year : null;
+        previousYear = step.year;
         return (
-          <div key={key}>
-            {loadDivider && <Divider />}
-            <Step
-              year={currentYear}
-              title={step.title}
-              description={step.description}
-            />
+          <div key={i}>
+            {currentYear && i !== 0 && <div className="border my-8"></div>}
+            {currentYear && (
+              <p className="font-bold text-lg md:text-xl text-gray-900 dark:text-gray-100 mb-4">
+                {currentYear}
+              </p>
+            )}
+            <div className="flex items-center text-green-600 dark:text-green-300 m-2">
+              <FiCheckCircle />
+              <h4 className="font-medium ml-2">{step.title}</h4>
+            </div>
+            {step.description && (
+              <p className="text-sm ml-8 mb-4">{step.description}</p>
+            )}
           </div>
         );
       })}
