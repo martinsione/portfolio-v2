@@ -5,10 +5,10 @@ import { timeline } from "@/constants/timeline.config";
 export default function about() {
   return (
     <Layout title="About">
-      <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4">
+      <h1 className="font-bold tracking-tight text-3xl md:text-5xl mb-4">
         About Me
       </h1>
-      <div className="mb-8 prose leading-6 text-gray-600 dark:text-gray-400">
+      <div className="prose md:prose-lg mb-16">
         <p>
           Hey, I&apos;m Martin. I&apos;m a frontend developer, currently working
           mostly with javascript and react.
@@ -29,7 +29,12 @@ export default function about() {
           time with friends and family.
         </p>
       </div>
-      <Timeline title="Timeline" timeline={timeline} />
+
+      <h3 className="font-bold tracking-tight text-2xl md:text-4xl mb-4">
+        Timeline
+      </h3>
+
+      <Timeline timeline={timeline} />
     </Layout>
   );
 }
