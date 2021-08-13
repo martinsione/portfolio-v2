@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { useState, useRef } from "react";
-import { FaGithub, FaPlay, FaChevronDown } from "react-icons/fa";
+import { FaGithub, FaPlay } from "react-icons/fa";
 import ExternalLink from "@/components/ExternalLink";
 
 const ExLink = ({
@@ -13,7 +12,7 @@ const ExLink = ({
   logo: React.ReactFragment;
 }) => (
   <ExternalLink
-    className="flex items-center rounded bg-gray-100 dark:bg-gray-900 py-2 px-4 md:px-10 mx-2"
+    className="flex justify-center items-center rounded w-full bg-gray-100 dark:bg-gray-900 py-2 px-4 mx-1"
     href={href}
   >
     {name}
@@ -30,50 +29,26 @@ export default function ProjectCard({
 }: {
   title: string;
   description: string;
-  img?: string;
+  img: string;
   url?: string;
   repo?: string;
 }) {
-  const [toggle, setToggle] = useState(false);
-  const [height, setHeight] = useState("0px");
-  const content = useRef("0px");
-  const handleClick = () => {
-    setToggle(toggle === false ? true : false);
-    setHeight(toggle === false ? `${content.current.scrollHeight}px` : "0px");
-  };
-
   return (
-    <div className="border rounded  hover:shadow-md dark:hover:border-gray-200 py-2 px-3 mb-4">
-      <div className="cursor-pointer" onClick={handleClick}>
-        <div className="flex justify-between text-xl font-semibold">
-          <h4 className="text-xl">{title}</h4>
-          <button
-            className={`text-2xl duration-500 ${toggle && "-rotate-180"}`}
-          >
-            <FaChevronDown />
-          </button>
-        </div>
-        <p>{description}</p>
-      </div>
-
-      <div
-        ref={content}
-        style={{ maxHeight: `${height}` }}
-        className="overflow-hidden transition-all duration-500"
-      >
-        {img && (
-          <span className="flex flex-col rounded overflow-hidden mb-4">
-            <Image
-              width="192"
-              height="108"
-              layout="responsive"
-              objectFit="contain"
-              src={img}
-              alt={description}
-            />
-          </span>
-        )}
-        <div className="flex flex-row justify-center">
+    <div className="md:flex flex-row items-start mb-16">
+      <figure className="rounded-lg overflow-hidden shadow-md w-full mb-4">
+        <Image
+          width="192"
+          height="108"
+          objectFit="contain"
+          layout="responsive"
+          src={img}
+          alt={description}
+        />
+      </figure>
+      <div className="md:px-5">
+        <h4 className="font-bold text-xl md:text-2xl mb-2">{title}</h4>
+        <p className="prose md:prose-lg mb-2">{description}</p>
+        <div className="flex">
           {url && <ExLink name="Demo" href={url} logo={<FaPlay />} />}
           {repo && <ExLink name="Github" href={repo} logo={<FaGithub />} />}
         </div>
