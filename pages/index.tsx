@@ -10,7 +10,7 @@ export default function Home() {
         <h1 className="font-bold text-3xl md:text-5xl mb-4">
           Hey, I’m Martin Sione
         </h1>
-        <h2 className="prose text-gray-600 dark:text-gray-400 mb-4">
+        <h2 className="prose md:prose-xl text-gray-600 dark:text-gray-400 mb-4">
           I’m a frontend developer, javascript and react enthusiast. Currently
           studing computer science.
         </h2>
@@ -29,7 +29,7 @@ export default function Home() {
           </ExternalLink>
         </div>
       </div>
-      <h3 className="font-bold text-2xl md:text-4xl mb-4">Projects</h3>
+      <h3 className="font-bold text-2xl md:text-4xl mb-4 md:mb-8">Projects</h3>
       <ProjectCard
         title="Amazon Clone"
         description="This was one of my very first project with react and I'm very proud of it. It has full auth implementation with firebase."
@@ -40,14 +40,15 @@ export default function Home() {
       <ProjectCard
         title="Fordev"
         description="Users can post and see what others are doing. It is built with nextjs and it has github auth implemented with firebase."
+        img="/images/projects/fordev/fordev-1.png"
         url="https://fordev.vercel.app/"
         repo="https://github.com/martinsione/fordev"
       />
-      <ProjectCard
+      {/* <ProjectCard
         title="Job Finder"
-        description='This was my first "serious" project, it was made for a UTN web development course. It is an app to find a job, built using sequelize and handlebars as a templating engine'
+        description='This was my first "serious" project, it was made for a UTN web development course. Built using sequelize and handlebars as a templating engine '
         repo="https://github.com/martinsione/job-finder"
-      />
+      /> */}
     </Layout>
   );
 }

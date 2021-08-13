@@ -7,32 +7,31 @@ import { NAV_LINKS } from "@/constants/links";
 
 export default function Navbar() {
   const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
+
+  // next-themes need to be mounted before being used
   useEffect(() => setMounted(true), []);
 
   const router = useRouter();
 
   return (
-    <nav className="sticky top-0 flex justify-between items-center w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-black text-lg">
-      <a href="#skip" className="sr-only focus:not-sr-only">
-        Skip to content
-      </a>
+    <nav className="sticky top-0 flex justify-between items-center text-lg z-50 px-8 py-4 my-4 md:my-8 bg-white dark:bg-black">
       <button
         aria-label="Toggle Dark Mode"
         type="button"
-        className="flex items-center justify-center rounded bg-gray-200 dark:bg-gray-800 h-10 w-10"
-        onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+        className="flex justify-center items-center rounded bg-gray-200 dark:bg-gray-800 p-3"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
-        {mounted && (resolvedTheme === "dark" ? <FaSun /> : <FaMoon />)}
+        {mounted && (theme === "dark" ? <FaSun /> : <FaMoon />)}
       </button>
       <div>
         {NAV_LINKS.map((link, index: number) => (
           <Link key={index} href={link.url}>
             <a
-              className={`pl-4 hover:text-gray-900 dark:hover:text-gray-100 ${
+              className={`pl-4 ${
                 router.asPath === link.url
                   ? "font-semibold text-gray-900 dark:text-gray-100"
-                  : "text-gray-600 dark:text-gray-400"
+                  : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
               }`}
             >
               {link.name}
