@@ -32,9 +32,9 @@ export default function Home() {
       <h3 className="font-bold text-2xl md:text-4xl mb-4 md:mb-8">Projects</h3>
       <ProjectCard
         title="Amazon Clone"
-        description="This was one of my very first project with react and I'm very proud of it. It has full auth implementation with firebase."
+        description="This is a frontend clone of Amazon, built with react and firebase. It has full email auth implementation."
         img="/images/projects/amazon-clone/amazon-clone-1.png"
-        url="https://amazon-clone-martinsione.vercel.app/"
+        url="https://martinsione-amazon.vercel.app/"
         repo="https://github.com/martinsione/amazon-clone"
       />
       <ProjectCard
