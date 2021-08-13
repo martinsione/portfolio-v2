@@ -1,8 +1,6 @@
 import Image from "next/image";
-import { useState } from "react";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { IoLogoVercel } from "react-icons/io5";
-import { FaGithub } from "react-icons/fa";
+import { useState, useRef } from "react";
+import { FaGithub, FaPlay, FaChevronDown } from "react-icons/fa";
 import ExternalLink from "@/components/ExternalLink";
 
 const ExLink = ({
@@ -15,7 +13,7 @@ const ExLink = ({
   logo: React.ReactFragment;
 }) => (
   <ExternalLink
-    className="flex items-center justify-center rounded bg-gray-100 dark:bg-gray-900 px-4 md:px-10 py-2 mx-2"
+    className="flex items-center rounded bg-gray-100 dark:bg-gray-900 py-2 px-4 md:px-10 mx-2"
     href={href}
   >
     {name}
@@ -37,47 +35,49 @@ export default function ProjectCard({
   repo?: string;
 }) {
   const [toggle, setToggle] = useState(false);
-
-  const handleClick = () => setToggle(toggle === false ? true : false);
+  const [height, setHeight] = useState("0px");
+  const content = useRef("0px");
+  const handleClick = () => {
+    setToggle(toggle === false ? true : false);
+    setHeight(toggle === false ? `${content.current.scrollHeight}px` : "0px");
+  };
 
   return (
-    <>
-      <div
-        className="cursor-pointer hover:text-gray-700 dark:hover:text-gray-300 mb-4"
-        onClick={handleClick}
-      >
+    <div className="border rounded  hover:shadow-md dark:hover:border-gray-200 py-2 px-3 mb-4">
+      <div className="cursor-pointer" onClick={handleClick}>
         <div className="flex justify-between text-xl font-semibold">
-          <h4>{title}</h4>
-          <button className="text-2xl">
-            {toggle ? <IoIosArrowUp /> : <IoIosArrowDown />}
+          <h4 className="text-xl">{title}</h4>
+          <button
+            className={`text-2xl duration-500 ${toggle && "-rotate-180"}`}
+          >
+            <FaChevronDown />
           </button>
         </div>
-        <div>
-          <p>{description}</p>
-        </div>
+        <p>{description}</p>
       </div>
 
-      {toggle && (
-        <>
-          {img && (
-            <span className="flex flex-col rounded-xl overflow-hidden mb-4">
-              <Image
-                width="192"
-                height="108"
-                layout="responsive"
-                objectFit="contain"
-                src={img}
-                alt={description}
-              />
-            </span>
-          )}
-          <div className="flex flex-row justify-center">
-            {url && <ExLink name="Deploy" href={url} logo={<IoLogoVercel />} />}
-            {repo && <ExLink name="Github" href={repo} logo={<FaGithub />} />}
-          </div>
-        </>
-      )}
-      <div className="border border-gray-200 dark:border-gray-800 my-6"></div>
-    </>
+      <div
+        ref={content}
+        style={{ maxHeight: `${height}` }}
+        className="overflow-hidden transition-all duration-500"
+      >
+        {img && (
+          <span className="flex flex-col rounded overflow-hidden mb-4">
+            <Image
+              width="192"
+              height="108"
+              layout="responsive"
+              objectFit="contain"
+              src={img}
+              alt={description}
+            />
+          </span>
+        )}
+        <div className="flex flex-row justify-center">
+          {url && <ExLink name="Demo" href={url} logo={<FaPlay />} />}
+          {repo && <ExLink name="Github" href={repo} logo={<FaGithub />} />}
+        </div>
+      </div>
+    </div>
   );
 }
