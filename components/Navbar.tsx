@@ -7,7 +7,7 @@ import { NAV_LINKS } from "@/constants/links";
 
 export default function Navbar() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   // next-themes need to be mounted before being used
   useEffect(() => setMounted(true), []);
@@ -20,9 +20,9 @@ export default function Navbar() {
         aria-label="Toggle Dark Mode"
         type="button"
         className="flex justify-center items-center rounded bg-gray-200 dark:bg-gray-800 p-3"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       >
-        {mounted && (theme === "dark" ? <FaSun /> : <FaMoon />)}
+        {mounted && (resolvedTheme === "dark" ? <FaSun /> : <FaMoon />)}
       </button>
       <div>
         {NAV_LINKS.map((link, index: number) => (
