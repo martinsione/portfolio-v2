@@ -1,4 +1,3 @@
-import { NAV_LINKS } from "@/constants/links";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/router";
