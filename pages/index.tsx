@@ -1,7 +1,7 @@
-import { SOCIAL_LINKS } from "@/constants/links";
 import ExternalLink from "@/components/ExternalLink";
 import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
+import { SOCIAL_LINKS } from "@/constants/links";
 
 export default function Home() {
   return (
@@ -30,6 +30,13 @@ export default function Home() {
         </div>
       </div>
       <h3 className="font-bold text-2xl md:text-4xl mb-4 md:mb-8">Projects</h3>
+      <ProjectCard
+        title="Coffee ecommerce website"
+        description="It is built with React, NextJS, TailwindCSS and firebase. The data is fetched from firestore."
+        img="/images/projects/coffeestore/coffeestore-1.png"
+        url="https://coffeestore.vercel.app/"
+        repo="https://github.com/martinsione/coffeestore"
+      />
       <ProjectCard
         title="Amazon Clone"
         description="This is a frontend clone of Amazon, built with react and firebase. It has full email auth implementation."
