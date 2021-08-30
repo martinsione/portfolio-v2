@@ -23,7 +23,7 @@
   }
 
   a {
-    @apply text-gray-500;
+    @apply text-gray-600;
     @apply dark:text-gray-400;
     @apply transition;
     @apply duration-200;
