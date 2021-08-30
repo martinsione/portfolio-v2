@@ -13,7 +13,7 @@ export default function about() {
           Hi, I&apos;m Martin and I&apos;m 18 years old. I&apos;m a self-taught
           software engineer looking for my first job as a frontend developer 👨🏽‍🏫.
           Currently I&apos;m studing Computer Science 🖥️ at Universidad Nacional
-          del litoral.
+          del Litoral.
         </p>
         <p>
           I&apos;m an analitic and introvert person willing to learn something
