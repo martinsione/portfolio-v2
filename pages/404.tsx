@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <Layout title="404">
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center mt-36">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 md:mb-12">
           404 - Page not found
         </h1>

@@ -44,3 +44,20 @@
     @apply dark:text-gray-100;
   }
 }
+
+.btn-primary {
+  @apply rounded border border-black dark:border-white;
+  @apply text-white dark:text-black hover:text-black dark:hover:text-white;
+  @apply bg-black dark:bg-white hover:bg-white dark:hover:bg-black;
+  @apply transition duration-200;
+}
+.btn-primary:disabled {
+  @apply pointer-events-none;
+}
+.btn-secondary {
+  /* rounded border font-semibold  py-2 px-8 mr-2 */
+  @apply rounded border border-gray-500 dark:border-gray-400 hover:border-black dark:hover:border-white;
+  /* @apply text-white dark:text-black hover:text-black dark:hover:text-white; */
+  /* @apply bg-black dark:bg-white hover:bg-white dark:hover:bg-black; */
+  @apply transition duration-200;
+}

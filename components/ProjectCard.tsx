@@ -34,8 +34,8 @@ export default function ProjectCard({
   repo?: string;
 }) {
   return (
-    <div className="md:flex flex-row items-start mb-16">
-      <figure className="rounded-lg overflow-hidden shadow-md w-full mb-4">
+    <div className="md:flex flex-row mb-16">
+      <figure className="rounded-lg overflow-hidden shadow-md w-full mb-4 md:mb-0">
         <Image
           width="192"
           height="108"
@@ -45,9 +45,11 @@ export default function ProjectCard({
           alt={description}
         />
       </figure>
-      <div className="md:px-5">
-        <h4 className="font-bold text-xl md:text-2xl mb-2">{title}</h4>
-        <p className="prose md:prose-lg mb-2">{description}</p>
+      <div className="md:px-5 flex flex-col justify-between">
+        <span>
+          <h4 className="font-medium text-lg md:text-xl mb-2">{title}</h4>
+          <p className="prose mb-2">{description}</p>
+        </span>
         <div className="flex">
           {url && <ExLink name="Demo" href={url} logo={<FaPlay />} />}
           {repo && <ExLink name="Github" href={repo} logo={<FaGithub />} />}

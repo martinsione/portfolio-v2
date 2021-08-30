@@ -11,21 +11,20 @@ export default function Home() {
           Hey, I’m Martin Sione
         </h1>
         <h2 className="prose md:prose-lg text-gray-600 dark:text-gray-400 mb-4">
-          I’m a frontend developer, javascript and react enthusiast. Currently
-          studing computer science.
+          I’m a frontend developer and Computer Science student.
         </h2>
         <div className="flex flex-row">
           <ExternalLink
-            className="rounded font-bold border-black dark:border-white text-white dark:text-black border bg-black dark:bg-white hover:bg-white dark:hover:bg-black py-2 px-8 mr-4"
+            className="btn-primary font-bold py-2 px-8 mr-2"
+            href={`mailto:${SOCIAL_LINKS.mail}`}
+          >
+            Contact Me
+          </ExternalLink>
+          <ExternalLink
+            className="btn-secondary font-medium py-2 px-6"
             href={SOCIAL_LINKS.resume}
           >
             Resume
-          </ExternalLink>
-          <ExternalLink
-            className="rounded border font-semibold border-gray-500 dark:border-gray-400 hover:border-black dark:hover:border-white py-2 px-8"
-            href={`mailto:${SOCIAL_LINKS.mail}`}
-          >
-            Mail
           </ExternalLink>
         </div>
       </div>
