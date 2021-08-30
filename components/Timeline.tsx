@@ -1,6 +1,6 @@
 import { FiCheckCircle } from "react-icons/fi";
 
-interface props {
+export interface props {
   year: number;
   title: string;
   description?: string;

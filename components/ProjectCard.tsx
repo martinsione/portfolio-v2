@@ -1,6 +1,6 @@
+import ExternalLink from "@/components/ExternalLink";
 import Image from "next/image";
 import { FaGithub, FaPlay } from "react-icons/fa";
-import ExternalLink from "@/components/ExternalLink";
 
 const ExLink = ({
   href,

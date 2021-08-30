@@ -1,9 +1,19 @@
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import { useTheme } from "next-themes";
-import { FaSun, FaMoon } from "react-icons/fa";
 import { NAV_LINKS } from "@/constants/links";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
+
+interface Links {
+  name: string;
+  url: string;
+}
+
+const NAV_LINKS: Array<Links> = [
+  { name: "About", url: "/about" },
+  { name: "Home", url: "/" },
+];
 
 export default function Navbar() {
   const [mounted, setMounted] = useState(false);

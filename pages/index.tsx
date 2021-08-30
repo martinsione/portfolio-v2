@@ -16,7 +16,7 @@ export default function Home() {
         </h2>
         <div className="flex flex-row">
           <ExternalLink
-            className="rounded font-bold border border-black dark:border-white text-white dark:text-black border bg-black dark:bg-white hover:bg-white dark:hover:bg-black py-2 px-8 mr-4"
+            className="rounded font-bold border-black dark:border-white text-white dark:text-black border bg-black dark:bg-white hover:bg-white dark:hover:bg-black py-2 px-8 mr-4"
             href={SOCIAL_LINKS.resume}
           >
             Resume
@@ -51,11 +51,6 @@ export default function Home() {
         url="https://fordev.vercel.app/"
         repo="https://github.com/martinsione/fordev"
       />
-      {/* <ProjectCard
-        title="Job Finder"
-        description='This was my first "serious" project, it was made for a UTN web development course. Built using sequelize and handlebars as a templating engine '
-        repo="https://github.com/martinsione/job-finder"
-      /> */}
     </Layout>
   );
 }

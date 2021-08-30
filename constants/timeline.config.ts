@@ -1,8 +1,4 @@
-interface props {
-  year: number;
-  title: string;
-  description?: string;
-}
+import { props } from "@/components/Timeline";
 
 export const timeline: Array<props> = [
   {
