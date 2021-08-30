@@ -10,23 +10,19 @@ export default function about() {
       </h1>
       <div className="prose md:prose-lg mb-16">
         <p>
-          Hey, I&apos;m Martin. I&apos;m a frontend developer, currently working
-          mostly with javascript and react.
+          Hi, I&apos;m Martin and I&apos;m 18 years old. I&apos;m a self-taught
+          software engineer looking for my first job as a frontend developer 👨🏽‍🏫.
+          Currently I&apos;m studing Computer Science 🖥️ at Universidad Nacional
+          del litoral.
         </p>
         <p>
-          Since I was a child I knew my goal was to became a software engineer
-          🧑🏽‍🔬. In 2020 due to the pandemic I had a lot of free time at home,
-          so I decided it was time for me to start coding.
+          I&apos;m an analitic and introvert person willing to learn something
+          new everyday. I believe in respect and good communication between
+          teams.
         </p>
         <p>
-          Currently I&apos;m studing Computer Science 🖥️ in UNL (National
-          University of Litoral) and I&apos;m really liking it so far, I&apos;m
-          on my first year and I&apos;m sure there&apos;s lot to learn 👨🏽‍🏫.
-        </p>
-        <p>
-          I grew up in small-town Parana, Argentina. I graduated High School in
-          2020. I spend my free time playing music 🎧, soccer ⚽ and enjoying
-          time with friends and family.
+          I grew up in small-town Parana, Argentina. I spend my free time
+          playing music 🎧, soccer ⚽ and enjoying time with friends and family.
         </p>
       </div>
 
