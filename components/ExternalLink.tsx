@@ -1,20 +1,7 @@
-export default function ExternalLink({
-  className,
-  href,
-  children,
-}: {
-  className?: string;
-  href: string;
-  children: React.ReactNode;
-}) {
+export default function ExternalLink(props: any) {
   return (
-    <a
-      className={className}
-      target="_blank"
-      rel="noopener noreferrer"
-      href={href}
-    >
-      {children}
+    <a target="_blank" rel="noopener noreferrer" {...props}>
+      {props.children}
     </a>
   );
 }
