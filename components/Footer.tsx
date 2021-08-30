@@ -1,5 +1,5 @@
 import ExternalLink from "@/components/ExternalLink";
-import { SOCIAL_LINKS } from "@/constants/links";
+import { SOCIAL_LINKS } from "@/constants/social";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 

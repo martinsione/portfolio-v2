@@ -1,7 +1,7 @@
 import ExternalLink from "@/components/ExternalLink";
 import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
-import { SOCIAL_LINKS } from "@/constants/links";
+import { SOCIAL_LINKS } from "@/constants/social";
 
 export default function Home() {
   return (

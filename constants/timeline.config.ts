@@ -14,12 +14,6 @@ export const timeline: Array<props> = [
   },
   {
     year: 2020,
-    title: "First moves in the stock market 📈",
-    description:
-      "Decided to start investing all my savings, learned a lot about stocks and cryptocurrency.",
-  },
-  {
-    year: 2020,
     title: "Got into coding 👨🏻‍💻",
     description:
       "Starting at the beginning of 2020, with the lockdown I decided it was time for me to start learning a new skill.",
