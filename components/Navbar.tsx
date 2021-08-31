@@ -24,11 +24,11 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className="sticky top-0 flex justify-between items-center text-lg z-50 px-8 py-4 my-4 md:my-8 bg-white dark:bg-black">
+    <nav className="sticky top-0 flex justify-between items-center text-lg bg-white dark:bg-black z-50 py-4 px-8 my-4 md:my-8">
       <button
         aria-label="Toggle Dark Mode"
         type="button"
-        className="flex justify-center items-center rounded bg-gray-200 dark:bg-gray-800 p-3"
+        className="rounded bg-gray-200 dark:bg-gray-800 p-3"
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       >
         {mounted && (resolvedTheme === "dark" ? <FaSun /> : <FaMoon />)}
@@ -37,11 +37,8 @@ export default function Navbar() {
         {NAV_LINKS.map((link, index: number) => (
           <Link key={index} href={link.url}>
             <a
-              className={`pl-4 ${
-                router.asPath === link.url
-                  ? "font-semibold text-gray-900 dark:text-gray-100"
-                  : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-              }`}
+              className={`text-gray-900 dark:text-gray-100 hover:opacity-100 pl-4 
+              ${router.asPath === link.url ? "font-medium" : "opacity-60"}`}
             >
               {link.name}
             </a>

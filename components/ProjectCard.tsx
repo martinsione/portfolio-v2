@@ -45,15 +45,15 @@ export default function ProjectCard({
           alt={description}
         />
       </figure>
-      <div className="md:px-5 flex flex-col justify-between">
+      <div className="flex flex-col justify-between md:px-5">
         <span>
           <h4 className="font-medium text-lg md:text-xl mb-2">{title}</h4>
           <p className="prose mb-2">{description}</p>
         </span>
-        <div className="flex">
+        <span className="flex">
           {url && <ExLink name="Demo" href={url} logo={<FaPlay />} />}
           {repo && <ExLink name="Github" href={repo} logo={<FaGithub />} />}
-        </div>
+        </span>
       </div>
     </div>
   );
