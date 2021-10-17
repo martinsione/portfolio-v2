@@ -15,7 +15,15 @@
   "redirects": [
     {
       "source": "/resume",
-      "destination": "/sione-martin-resume-2021.pdf"
+      "destination": "/Martin Sione - Resume.pdf"
+    },
+    {
+      "source": "/resume-es",
+      "destination": "/Martin Sione - CV.pdf"
+    },
+    {
+      "source": "/cv",
+      "destination": "/Martin Sione - CV.pdf"
     },
     {
       "source": "/linkedin",
