@@ -31,7 +31,7 @@ export default function Home() {
       <h3 className="font-bold text-2xl md:text-4xl mb-4 md:mb-8">Projects</h3>
       <ProjectCard
         title="Coffee ecommerce website"
-        description="It is built with React, NextJS, TailwindCSS and firebase. The data is fetched from firestore."
+        description="It is built with React, TailwindCSS and firebase. The data is fetched from firestore."
         img="/images/projects/coffeestore/coffeestore-1.png"
         url="https://coffeestore.vercel.app/"
         repo="https://github.com/martinsione/coffeestore"
