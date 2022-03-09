@@ -30,6 +30,13 @@ export default function Home() {
       </div>
       <h3 className="font-bold text-2xl md:text-4xl mb-4 md:mb-8">Projects</h3>
       <ProjectCard
+        title="Videogames App"
+        description="SPA to show videogames information consuming and external API and also with the possibility of creating your own games and saving them to a database"
+        img="/images/projects/videogames/videogames-1.png"
+        url="https://videogames-demo.vercel.app/games"
+        repo="https://github.com/martinsione/videogames"
+      />
+      <ProjectCard
         title="Coffee ecommerce website"
         description="It is built with React, TailwindCSS and firebase. The data is fetched from firestore."
         img="/images/projects/coffeestore/coffeestore-1.png"
